@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gheza's Portofolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">GHZ</a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links">
+        <li><a href="#hero">Beranda</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#hero" class="mobile-link">Beranda</a></li>
+        <li><a href="#portfolio" class="mobile-link">Portofolio</a></li>
+        <li><a href="#about" class="mobile-link">Tentang</a></li>
+        <li><a href="#contact" class="mobile-link">Kontak</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════ -->
+  <section id="hero">
+
+    <!-- Decorative blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Grid noise overlay -->
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-inner">
+
+      <!-- Left: Text content -->
+      <div class="hero-text">
+        <div class="hero-pill fade-up" style="--delay: 0.1s">
+          <span class="pill-dot"></span>
+          Fotografer &amp; Visual Storyteller
+        </div>
+
+        <h1 class="hero-title fade-up" style="--delay: 0.25s">
+          Setiap <em>Foto</em><br />Punya Cerita
+        </h1>
+
+        <p class="hero-desc fade-up" style="--delay: 0.4s">
+          Selamat datang! 
+          Mengabadikan momen berharga melalui lensa dan cerita.
+        </p>
+
+        <div class="hero-ctas fade-up" style="--delay: 0.55s">
+          <a href="#portfolio" class="btn-primary">Lihat Karya</a>
+          <a href="#contact" class="btn-ghost">Hubungi Saya</a>
+        </div>
+      </div>
+
+      <!-- Right: Featured photo -->
+      <div class="hero-photo-wrap fade-up" style="--delay: 0.35s">
+        <div class="hero-photo-frame">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+            alt="Featured photography"
+            class="hero-photo"
+          />
+          <div class="hero-photo-badge">
+            <span class="badge-num">120+</span>
+            <span class="badge-label">Foto</span>
+          </div>
+        </div>
+
+        <!-- Floating accent card -->
+        <div class="hero-accent-card">
+          <div class="accent-dot"></div>
+          <div>
+            <p class="accent-title">Tersedia</p>
+            <p class="accent-sub">untuk booking</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       PORTFOLIO SECTION
+  ═══════════════════════════════════════ -->
+  <section id="portfolio">
+
+    <div class="section-header reveal">
+      <p class="section-tag">Galeri Karya</p>
+      <h2 class="section-title">Momen yang <em>Diabadikan</em></h2>
+      <p class="section-desc">
+        Jelajahi koleksi foto dari berbagai genre — alam, portrait, street, hingga arsitektur.
+      </p>
+    </div>
+
+    <!-- Category filter pills -->
+    <div class="filter-row reveal">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="alam">Alam</button>
+      <button class="filter-btn" data-filter="portrait">Portrait</button>
+      <button class="filter-btn" data-filter="street">Street</button>
+      <button class="filter-btn" data-filter="arsitektur">Arsitektur</button>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-wrapper reveal">
+      <div class="carousel-track" id="carouselTrack">
+
+        <div class="photo-card" data-cat="alam">
+          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80" alt="Alam 1" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Pegunungan Senja</p>
+            <p class="card-cat">Alam</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="portrait">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80" alt="Portrait 1" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Cahaya Pagi</p>
+            <p class="card-cat">Portrait</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="street">
+          <img src="https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?w=500&q=80" alt="Street 1" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Kota di Malam Hari</p>
+            <p class="card-cat">Street</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="arsitektur">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80" alt="Arsitektur 1" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Garis &amp; Struktur</p>
+            <p class="card-cat">Arsitektur</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="alam">
+          <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=500&q=80" alt="Alam 2" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Golden Hour</p>
+            <p class="card-cat">Alam</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="portrait">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" alt="Portrait 2" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Bayangan &amp; Wajah</p>
+            <p class="card-cat">Portrait</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="street">
+          <img src="https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=500&q=80" alt="Street 2" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Hiruk Pikuk Pasar</p>
+            <p class="card-cat">Street</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="arsitektur">
+          <img src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=500&q=80" alt="Arsitektur 2" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Simetri Modern</p>
+            <p class="card-cat">Arsitektur</p>
+          </div>
+        </div>
+
+        <div class="photo-card" data-cat="alam">
+          <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=500&q=80" alt="Alam 3" loading="lazy" />
+          <div class="card-overlay">
+            <p class="card-title">Bintang Malam</p>
+            <p class="card-cat">Alam</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Carousel controls -->
+    <div class="carousel-controls reveal">
+      <button class="carousel-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
+      <div class="dot-group" id="dotGroup"></div>
+      <button class="carousel-btn" id="nextBtn" aria-label="Next">&#8594;</button>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════ -->
+  <section id="about">
+
+    <!-- Left: photo -->
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo-frame">
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80"
+          alt="Foto Profil"
+          class="about-photo"
+        />
+      </div>
+      <div class="about-floating-card">
+        <p class="floating-year">2023</p>
+        <p class="floating-label">Mulai Berkarya</p>
+      </div>
+    </div>
+
+    <!-- Right: bio -->
+    <div class="about-text reveal">
+      <p class="section-tag">Tentang Saya</p>
+      <h2 class="section-title">Halo, Saya <em>Gheza</em> 👋</h2>
+      <p class="about-bio">
+        Fotografer berbasis di Yogyakarta dengan passion mendalam terhadap cahaya dan momen.
+        Saya percaya setiap gambar adalah jendela ke dunia yang berbeda — dan tugas saya
+        adalah membuka jendela itu seindah mungkin.
+      </p>
+      <p class="about-bio" style="margin-top: 1rem;">
+        Spesialisasi di landscape, portrait, dan street photography. Selalu siap menjelajah
+        lokasi baru demi satu frame yang sempurna.
+      </p>
+
+      <!-- Stats -->
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Tahun Pengalaman</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">120+</span>
+          <span class="stat-label">Foto</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Penghargaan</span>
+        </div>
+      </div>
+
+      <!-- Skills tags -->
+      <div class="skill-tags">
+        <span class="skill-tag">Landscape</span>
+        <span class="skill-tag">Portrait</span>
+        <span class="skill-tag">Street</span>
+        <span class="skill-tag">Arsitektur</span>
+        <span class="skill-tag">Lightroom</span>
+        <span class="skill-tag">Capture One</span>
+      </div>
+
+      <a href="#contact" class="btn-primary" style="display:inline-block; margin-top: 2rem;">
+        Cari tahu tentangku →
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════ -->
+  <section id="contact">
+
+    <!-- Background decoration -->
+    <div class="contact-blob"></div>
+
+    <div class="contact-inner reveal">
+      <p class="section-tag">Kontak</p>
+      <h2 class="section-title">Ayo <em>Berkolaborasi!</em></h2>
+      <p class="contact-desc">
+        Tertarik dengan portofolio milikku? Yuk cari tahu lebih tentangku dengan klik media sosialku untuk berkolaborasi!
+      </p>
+
+      <!-- Social cards -->
+      <div class="social-grid">
+
+        <a
+          href="https://instagram.com/ghes2z"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-card"
+          aria-label="Instagram"
+        >
+          <div class="social-icon-wrap ig-bg">
+            <!-- Instagram SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <p class="social-name">Instagram</p>
+            <p class="social-handle">@ghes2z</p>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+        <a
+          href="https://twitter.com/ghes2z"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-card"
+          aria-label="Twitter / X"
+        >
+          <div class="social-icon-wrap tw-bg">
+            <!-- X/Twitter SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <p class="social-name">Twitter / X</p>
+            <p class="social-handle">@ghes2z</p>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+        <a
+          href="mailto:gegeworks16@gmail.com"
+          class="social-card"
+          aria-label="Email"
+        >
+          <div class="social-icon-wrap em-bg">
+            <!-- Email SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="3"/>
+              <polyline points="2,4 12,13 22,4"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <p class="social-name">Email</p>
+            <p class="social-handle">gegeworks16@gmail.com</p>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">Sebuah Portofolio Dibuat Untuk Menyimpan Memori dan Cerita</p>
+      <p class="footer-copy">© 2026 Gheza Portofolio</p>
+      <div class="footer-links">
+        <a href="#hero">Beranda</a>
+        <a href="#portfolio">Portofolio</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
